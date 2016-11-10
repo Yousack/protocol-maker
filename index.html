@@ -1,0 +1,259 @@
+<html>
+
+<head>
+  <script src="https://use.fontawesome.com/15c9132fce.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="sov.js"></script>
+  <script type="text/javascript" src="analyzer.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.2.3/css/bulma.min.css">
+</head>
+
+<body>
+  <div class="columns">
+    <div class="column is-10 is-offset-1">
+      <div class="content">
+        <h1>Protocol Maker</h1>
+        <form action="/" id="protocol">
+          <label class="label">Skater's Info</label>
+          <div class="control is-grouped">
+            <p class="control">
+              <input type="text" class="input" name="rank" placeholder="Rank">
+            </p>
+            <p class="control is-expanded">
+              <input type="text" class="input" name="name" placeholder="Name">
+            </p>
+            <p class="control">
+              <input type="text" class="input" name="nation" placeholder="Nation">
+            </p>
+            <p class="control">
+              <input type="text" class="input" name="snum" placeholder="Starting Number">
+            </p>
+          </div>
+          <label class="label">Technical Elements (available info marks: x, e, !, <, <<, V, +REP, +SEQ, +COMBO)</label>
+          <div class="columns">
+            <div class="column tes">
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">1st</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input" placeholder="Elements' Abbrebiation"></p>
+                  <p class="control"><input type="text" class="input" placeholder="Judge's Avg. GOE"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">2nd</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">3rd</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">4th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">5th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">6th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">7th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+            </div>
+            <div class="column tes">
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">8th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">9th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">10th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">11th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">12th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">13th</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input"></p>
+                  <p class="control"><input type="text" class="input"></p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <label class="label">Program Components Score</label>
+          <div class="columns">
+            <div class="column">
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">Scores</label></div>
+                <div class="control is-grouped">
+                  <p class="control is-expanded"><input type="text" class="input" placeholder="Skating Skills"></p>
+                  <p class="control is-expanded"><input type="text" class="input" placeholder="Transition / Linking Footwork"></p>
+                  <p class="control is-expanded"><input type="text" class="input" placeholder="Performance / Execution"></p>
+                  <p class="control is-expanded"><input type="text" class="input" placeholder="Choreography / Composition"></p>
+                  <p class="control is-expanded"><input type="text" class="input" placeholder="Interpretation"></p>
+                </div>
+              </div>
+              <div class="control is-horizontal">
+                <div class="control-label"><label for="" class="label">PCS Factor</label></div>
+                <div class="control">
+                  <div class="select">
+                    <select name="pcs" id="">
+                      <option value="lsp">x0.8 (Ladies SP)</option>
+                      <option value="msp">x1.0 (Men SP)</option>
+                      <option value="lfs">x1.6 (Ladies FS)</option>
+                      <option value="mfs">x2.0 (Men FS)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <h1>Protocol</h1>
+        <div class="tile is-ancestor">
+          <div class="tile">
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>Rank</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="rank"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical is-3">
+              <article class="tile is-child">
+                <p><strong>Name</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="name"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>Nation</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="nation"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>Starting Number</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="snum"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>Total</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="total"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>TES</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="tes"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>PCS</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="pcs"></p>
+              </article>
+            </div>
+            <div class="tile is-parent is-vertical">
+              <article class="tile is-child">
+                <p><strong>Deductions</strong></p>
+              </article>
+              <article class="tile is-child">
+                <p id="deductions"></p>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns">
+          <div class="column is-1">
+            <p><strong>#</strong></p>
+          </div>
+          <div class="column is-4">
+            <p><strong>Technical Elements</strong></p>
+          </div>
+          <div class="column">
+            <p><strong>Info</strong></p>
+          </div>
+          <div class="column">
+            <p><strong>Base Value</strong></p>
+          </div>
+          <div class="column">
+            <p><strong>GOE</strong></p>
+          </div>
+          <div class="column">
+            <p><strong>Scores of Panel</strong></p>
+          </div>
+        </div>
+
+        <div class="tes-result">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
