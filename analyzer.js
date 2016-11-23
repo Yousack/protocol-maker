@@ -9,6 +9,8 @@ $(function () {
         $('#nation').text($('input[name="nation"]').val());
         $('#snum').text($('input[name="snum"]').val());
 
+        var tes = 0;
+
         $('div.tes div.is-horizontal').each(function (tech_i, e) {
             var tesRow = this.children[1].children;
             var techInput = tesRow[0].children[0].value;
@@ -20,7 +22,7 @@ $(function () {
             var bv = 0
             var techElems = techInput.split('+');
             techElems.forEach(function (e, i, a) {
-                var jump = e.match(/([1-4])(T|S|Lo|F|Lz|A)([xe!<]*)/i)
+                var jump = e.match(/([1-4])(T|S|Lo|F|Lz|A)([xe!<]*)/i);
                 if (jump) {
                     console.log(jump);
                     var jumpElem = jump[1] + jump[2].toLowerCase();
@@ -45,6 +47,38 @@ $(function () {
                             bv += sov[jumpElem][0];
                         }
                     }
+                } else {
+                    var isv = false;
+                    if (e.match(/V$/i)) {
+                        isv = true
+                    }
+                    var other = e.replace(/V$/i, '');
+
+                    var level = null;
+                    if (other.match(/[1234b]$/i)) {
+                        level = other[other.length - 1];
+                        if (level == 'B') {
+                            level = 'b';
+                        } else {
+                            level = parseInt(level);
+                        }
+                        other = other.replace(/[1234b]$/i, '');
+                    }
+
+                    if (other.match(/^FC?CoSp/i) || other.match(/^FC[ULCS]Sp/i)) {
+                        other = other.replace(/^F/i, '')
+                    }
+
+                    other = other.toLowerCase()
+
+                    if (level == null) {
+                        bv = sov[other];
+                    } else if (isv) {
+                        bv = sov[other][1][level];
+                    } else {
+                        console.log(sov[other]);
+                        bv = sov[other][0][level];
+                    }
                 }
             });
 
@@ -58,8 +92,10 @@ $(function () {
                 bv *= 0.8;
             }
 
+
             bv = (Math.round(bv * 100) / 100).toFixed(2);
-            
+            tes += parseFloat(bv);
+
             var techTag = document.createElement('div');
             techTag.className = 'columns';
 
@@ -115,5 +151,8 @@ $(function () {
 
             resultTags.appendChild(techTag);
         });
+
+        tes = (Math.round(tes * 100) / 100).toFixed(2);
+        $('#tes').text(tes);
     });
 });
