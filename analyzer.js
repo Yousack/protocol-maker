@@ -24,7 +24,6 @@ $(function () {
             techElems.forEach(function (e, i, a) {
                 var jump = e.match(/([1-4])(T|S|Lo|F|Lz|A)([xe!<]*)/i);
                 if (jump) {
-                    console.log(jump);
                     var jumpElem = jump[1] + jump[2].toLowerCase();
                     var info = jump[3];
                     if (info.indexOf('<<') >= 0) {
@@ -76,7 +75,6 @@ $(function () {
                     } else if (isv) {
                         bv = sov[other][1][level];
                     } else {
-                        console.log(sov[other]);
                         bv = sov[other][0][level];
                     }
                 }
